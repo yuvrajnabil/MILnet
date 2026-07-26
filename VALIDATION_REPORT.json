@@ -1,0 +1,14 @@
+{
+  "visible_pages": [
+    "1_Home.py",
+    "2_Reality_Wall.py",
+    "3_Current_Activities.py",
+    "4_Weekly_Archive.py",
+    "5_MIL_Resources.py",
+    "6_Contact.py",
+    "7_Admin_Login.py",
+    "8_Admin_Dashboard.py"
+  ],
+  "python_files_checked": 31,
+  "syntax_errors": []
+}
