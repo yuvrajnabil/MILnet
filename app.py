@@ -1,6 +1,6 @@
 import streamlit as st
 from database import init_db
-from auth import initialise_auth_state
+from auth import initialise_auth_state, ensure_default_admin
 
 st.set_page_config(
     page_title="MIL Reality Check Bangladesh",
@@ -10,6 +10,7 @@ st.set_page_config(
 )
 
 init_db()
+ensure_default_admin()
 initialise_auth_state()
 
 pages = [
