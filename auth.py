@@ -47,3 +47,19 @@ def change_password(username: str, current_password: str, new_password: str):
         user.password_hash = generate_password_hash(new_password)
         db.commit()
         return True, "Password changed successfully."
+
+def ensure_default_admin():
+    with get_session() as db:
+        user = db.query(AdminUser).filter(
+            AdminUser.username == "admin"
+        ).first()
+
+        if not user:
+            db.add(
+                AdminUser(
+                    username="admin",
+                    password_hash=generate_password_hash("admin123"),
+                    is_active=True
+                )
+            )
+            db.commit()
